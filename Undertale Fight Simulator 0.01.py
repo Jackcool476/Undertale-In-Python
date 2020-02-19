@@ -15,10 +15,11 @@ UseMonsterCandy = ""
 MercyCommand = ""
 PlayerHealth = 20
 FroggitHealth = 20
-print("Froggit bounces towards you!")
+print("Froggit bounces towards you.")
+print("They prepare for a fight!")
 while FroggitDead == "No" or FroggitSpared == "No" or PlayerDead == "No":
     print("HP =", PlayerHealth)
-    BattleCommand = input("FIGHT, ACT, ITEM or MERCY")
+    BattleCommand = input("Use FIGHT, ACT, ITEM or MERCY")
     if BattleCommand == "FIGHT":
         PlayerDamage = int(random.randint(FroggitDamage1,FroggitDamage2))
         FroggitHealth = FroggitHealth - PlayerDamage
@@ -33,8 +34,8 @@ while FroggitDead == "No" or FroggitSpared == "No" or PlayerDead == "No":
             print("Froggit doesn't want to fight you anymore.")
             FroggitReadySpared = "Yes"
         if PlayerAct == "THREAT":
-            print("Froggit looks mad!!")
-            print("Froggit now does double damage! Oh no!")
+            print("Froggit looks mad!")
+            print("Froggit might be angrier now!")
             FroggitDamage1 = 2
             FroggitDamage2 = 10
     if BattleCommand == "ITEM":
@@ -46,31 +47,29 @@ while FroggitDead == "No" or FroggitSpared == "No" or PlayerDead == "No":
                     PlayerHealth = 20
                 HaveMonsterCandy = "No"
                 print("You now have", PlayerHealth,"health.")
-            else:
-                print("You decide not to.")
         elif HaveMonsterCandy == "No":
             print("You have no items to use.")
     if BattleCommand == "MERCY":
-        MercyCommand = input("Do you want to SPARE or FLEE?")
+        MercyCommand = input("Do you want to SPARE the enemy or FLEE from the fight?")
         if MercyCommand == "SPARE":
             if FroggitReadySpared == "Yes":
                 FroggitSpared = "Yes"
             elif FroggitReadySpared == "No":
-                print("Froggit doesn't want to be spared yet.")
+                print("Froggit won't be spared yet.")
         elif MercyCommand == "FLEE":
-            print("You realise that, in this beta, there is no overworld.")
+            print("You realise that, in fight sims, there is no overworld.")
     if FroggitReadySpared == "No":
         FroggitHit = int(random.randint(1,2))
-        PlayerDodge = input("Froggit attacks you. Dodge LEFT or RIGHT.")
+        PlayerDodge = input("Froggit gets ready to attack you. Will you dodge LEFT or RIGHT?")
         if FroggitHit == 1 and PlayerDodge == "LEFT" or FroggitHit == 2 and PlayerDodge == "RIGHT":
-            print("You get hit by it.")
+            print("You got hit.")
             PlayerHealth = PlayerHealth - 5
             if PlayerHealth == 0 or PlayerHealth < 0:
                 PlayerDead = "Yes"
         elif FroggitHit == 1 and PlayerDodge == "RIGHT" or FroggitHit == 2 and PlayerDodge == "LEFT":
             print("You dodge the attack.")
 if PlayerDead == "Yes":
-    print("Reload to try again.")
+    print("GAME OVER")
 elif FroggitDead == "Yes":
     print("You're a genocidal maniac!")
 elif FroggitSpared == "Yes":

@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "Chara",
+        "Flowey",
+        "Gaster",
+        "Toodle",
+        "Toriel"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
+}

@@ -17,14 +17,14 @@ elif Name == "G" or Name == "Gaster":
     quit()
 elif Name == "Sans":
     print("???: 'Do you wanna have a bad time?'")
-    
+
 print("Are you sure? Yes or No")
 CheckName = input()
 
 if CheckName == "No":
     print("Choose another name, this is your final chance!")
     Name = input()
-    
+
 print("You wake up on a field of flowers in a dark room.")
 input("Your back stings but the flowers are comforting in such a scary place.")
 print("Get up? Yes or No (which shall now be for every choice)")
@@ -34,13 +34,13 @@ if FallingRoom == "No":
     print("You lie there...")
     print("Try and get up again?")
     FallingRoom = input()
-    
+
     if FallingRoom == "No":
         print("Umm...")
         input("I guess I'll tell you some lore.")
         print("Wanna hear?")
         LoreReading = input()
-        
+
         if LoreReading == "Yes":
             print("Where to start...? I know! I'll tell you my name!")
             input("My name is...")
@@ -73,12 +73,12 @@ elif DodgeBullets == "No":
     HP = 1
     input("HP =", HP)
 input("'You idiot!'")
-input("'Who would pass up an oppurtunity like this, huh?'")
+input("'Who would pass up an opportunity like this, huh?'")
 input("'Toodle-oo, kiddo. DIE!'")
 input("Ovals surround you, what will you do?")
 input("A flame appears in front of you and hits Flowey.")
 input("A figure resembling a goat walks up to you.")
-input("???: 'What a miserable nasty creature torturing such poor inoccent youth.'")
+input("???: 'What a miserable nasty creature torturing such poor innocent youth.'")
 input("'Oh, my child, I am Toriel, caretaker of the RUINS.'")
 if DodgeBullets == "No":
     input("Toriel: 'Oh, let me heal you.'")
@@ -104,7 +104,7 @@ if FollowToriel == "No":
     input("Jack: 'Picture you getting thrashed.'")
     input("YOU DEAD, SON!")
     input("Cause:")
-    input("Getting thrashed by unhumanly beings (eg. a flower and a demon)")
+    input("Getting thrashed by inhumanly beings (eg. a flower and a demon)")
 if FollowToriel == "Yes":
     input("'Well then, let's get going!'")
     input("You follow Toriel into a room with a yellow star.")
@@ -118,7 +118,7 @@ if FollowToriel == "Yes":
     input("'Look at this, my child, it is a puzzle! You probably shouldn't do that, not without me?'")
     print("Do it by yourself anyway?")
     SpikePuzzle = input()
-    
+
     if SpikePuzzle == "Yes":
         print("'Ok, give it a try!'")
         input("You try and walk around the spikes.")
@@ -134,7 +134,7 @@ if FollowToriel == "Yes":
         input("'You must walk across this hallway, by yourself. Easy enough, right?'")
         print("She runs off, should you follow her?")
         FollowToriel2 = input()
-        
+
         if FollowToriel2 == "No":
             print("2 years later:")
             input()
@@ -149,7 +149,7 @@ if FollowToriel == "Yes":
             input("How about I sing something for you!")
             print("Would you like that? *invisiblepuppydogeyes*")
             SingSong = input()
-            
+
             if SingSong == "Yes":
                 print("Let's go, child!")
                 input("COLOURS WEAVE INTO A SPIRE O-")
@@ -157,7 +157,8 @@ if FollowToriel == "Yes":
                 input("You fall on the floor.")
                 input("YOU DIED!")
                 input("Cause:")
-                input(Name, "is rubbish at singing. So bad, they killed you. Well done. oh and also copyright issues.")
+                input(
+                    Name, "is rubbish at singing. So bad, they killed you. Well done. oh and also copyright issues.")
             if SingSong == "No":
                 print("ahhhhh come on!")
                 input("meanie")
@@ -169,10 +170,3 @@ input("Jack: 'I just had a brain-wave at school in the middle of a boring lesson
 input("Jack: 'I probably won't continue with this but I might come back to it. Maybe.'")
 input("Jack: 'Well, you should go continue on with your day. You might be having fun. Unlike me. :('")
 print("END")
-
-
-
-    
-
-    
-    

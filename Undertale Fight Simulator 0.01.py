@@ -21,12 +21,12 @@ while FroggitDead == "No" or FroggitSpared == "No" or PlayerDead == "No":
     print("HP =", PlayerHealth)
     BattleCommand = input("Use FIGHT, ACT, ITEM or MERCY")
     if BattleCommand == "FIGHT":
-        PlayerDamage = int(random.randint(FroggitDamage1,FroggitDamage2))
+        PlayerDamage = int(random.randint(FroggitDamage1, FroggitDamage2))
         FroggitHealth = FroggitHealth - PlayerDamage
         if FroggitHealth == 0 or FroggitHealth < 0:
             FroggitDead = "Yes"
         else:
-            print("Froggit took", PlayerDamage,"damage.")
+            print("Froggit took", PlayerDamage, "damage.")
     if BattleCommand == "ACT":
         PlayerAct = input("What will you do? FLIRT or THREAT?")
         if PlayerAct == "FLIRT":
@@ -46,11 +46,12 @@ while FroggitDead == "No" or FroggitSpared == "No" or PlayerDead == "No":
                 if PlayerHealth > 20:
                     PlayerHealth = 20
                 HaveMonsterCandy = "No"
-                print("You now have", PlayerHealth,"health.")
+                print("You now have", PlayerHealth, "health.")
         elif HaveMonsterCandy == "No":
             print("You have no items to use.")
     if BattleCommand == "MERCY":
-        MercyCommand = input("Do you want to SPARE the enemy or FLEE from the fight?")
+        MercyCommand = input(
+            "Do you want to SPARE the enemy or FLEE from the fight?")
         if MercyCommand == "SPARE":
             if FroggitReadySpared == "Yes":
                 FroggitSpared = "Yes"
@@ -59,8 +60,9 @@ while FroggitDead == "No" or FroggitSpared == "No" or PlayerDead == "No":
         elif MercyCommand == "FLEE":
             print("You realise that, in fight sims, there is no overworld.")
     if FroggitReadySpared == "No":
-        FroggitHit = int(random.randint(1,2))
-        PlayerDodge = input("Froggit gets ready to attack you. Will you dodge LEFT or RIGHT?")
+        FroggitHit = int(random.randint(1, 2))
+        PlayerDodge = input(
+            "Froggit gets ready to attack you. Will you dodge LEFT or RIGHT?")
         if FroggitHit == 1 and PlayerDodge == "LEFT" or FroggitHit == 2 and PlayerDodge == "RIGHT":
             print("You got hit.")
             PlayerHealth = PlayerHealth - 5
@@ -74,7 +76,4 @@ elif FroggitDead == "Yes":
     print("You're a genocidal maniac!")
 elif FroggitSpared == "Yes":
     print("Well done for being good!")
-##It can't get to the above six lines for some reason in the code? Plz help meh fix it.
-            
-        
-        
+# It can't get to the above six lines for some reason? Plz help meh fix it.

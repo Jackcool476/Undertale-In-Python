@@ -5,7 +5,8 @@
     "Gaster",
     "Toodle",
     "Toriel",
-    "Undertale"
+    "Undertale",
+    "Sans"
   ],
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true

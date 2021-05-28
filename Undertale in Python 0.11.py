@@ -2,7 +2,6 @@ MaxHP = 20
 HP = MaxHP
 print("Name the fallen human:")
 Name = input()
-
 if Name == "Chara":
     print("The true name.")
 elif Name == "Flowey":
@@ -17,41 +16,34 @@ elif Name == "G" or Name == "Gaster":
     quit()
 elif Name == "Sans":
     print("???: 'Do you wanna have a bad time?'")
-
 print("Are you sure? Yes or No")
 CheckName = input()
-
 if CheckName == "No":
     print("Choose another name, this is your final chance!")
     Name = input()
-
 print("You wake up on a field of flowers in a dark room.")
 input("Your back stings but the flowers are comforting in such a scary place.")
 print("Get up? Yes or No (which shall now be for every choice)")
 FallingRoom = input()
-
 if FallingRoom == "No":
     print("You lie there...")
     print("Try and get up again?")
     FallingRoom = input()
-
     if FallingRoom == "No":
         print("Umm...")
         input("I guess I'll tell you some lore.")
         print("Wanna hear?")
         LoreReading = input()
-
         if LoreReading == "Yes":
             print("Where to start...? I know! I'll tell you my name!")
             input("My name is...")
             input("Startled, you get up.")
         else:
-            print("Feeling better after not hearing spoilers, you get up.")
+            print("Feeling better after not hearing any spoilers, you get up.")
 input("You walk over to a large door with a symbol above it.")
 input("As you enter, you see a small sunflower in the distance.")
 print("Look closer?")
 ExamineFlower = input()
-
 if ExamineFlower == "No":
     print("A voice says, 'Don't run away,", Name)
 input("As you step closer, it starts talking:")
@@ -64,7 +56,6 @@ input("'What's LV? Why, it's LOVE of course! You want some LOVE, don'tcha?'")
 input("'Down here, LOVE is shared through little white friendliness pellets.'")
 print("It throws some white ovals at you. Dodge them?")
 DodgeBullets = input()
-
 if DodgeBullets == "Yes":
     print("'You know what's going on here, don't you.'")
     input("'To think you were them is stupid of me.'")
@@ -87,7 +78,6 @@ if DodgeBullets == "No":
 input("Toriel: 'Come and I will take you to my home.'")
 print("Follow her?")
 FollowToriel = input()
-
 if FollowToriel == "No":
     print("'*sobs* My child... *sobs* Goodbye...")
     input("Toriel runs off, crying.")
@@ -113,12 +103,11 @@ if FollowToriel == "Yes":
     input("You continue into a room with a Froggit in it.")
     input("Froggit bounces towards yo-")
     input("You hear a voice on the wind, Jack: 'Play Undertale Fight Simulator Beta for that, oooooooooooo'")
-    input("'Link on the Gamejolt page! ohohohhoohohhoho'")
+    input("'Link on the Github page! ohohohhoohohhoho'")
     input("You turn to face at a room of spikes.")
-    input("'Look at this, my child, it is a puzzle! You probably shouldn't do that, not without me?'")
+    input("'Look at this, my child, it is a puzzle! You probably shouldn't do that, not without my help?'")
     print("Do it by yourself anyway?")
     SpikePuzzle = input()
-
     if SpikePuzzle == "Yes":
         print("'Ok, give it a try!'")
         input("You try and walk around the spikes.")
@@ -134,7 +123,6 @@ if FollowToriel == "Yes":
         input("'You must walk across this hallway, by yourself. Easy enough, right?'")
         print("She runs off, should you follow her?")
         FollowToriel2 = input()
-
         if FollowToriel2 == "No":
             print("2 years later:")
             input()
@@ -149,7 +137,6 @@ if FollowToriel == "Yes":
             input("How about I sing something for you!")
             print("Would you like that? *invisiblepuppydogeyes*")
             SingSong = input()
-
             if SingSong == "Yes":
                 print("Let's go, child!")
                 input("COLOURS WEAVE INTO A SPIRE O-")
@@ -158,12 +145,11 @@ if FollowToriel == "Yes":
                 input("YOU DIED!")
                 input("Cause:")
                 input(
-                    Name, "is rubbish at singing. So bad, they killed you. Well done. oh and also copyright issues.")
+                    Name, "is rubbish at singing. So bad, that it killed you. Well done. Oh, also copyright issues.")
             if SingSong == "No":
                 print("ahhhhh come on!")
                 input("meanie")
                 input("Fine, let's just get this over and done wi-")
-
 input("???: 'Hello again! I see you've downloaded this for the 7th time. Well done to you. Oh yeah, I'm Jack btw.'")
 input("Jack: 'I may have sort-of kind-of lied about leaving this project alone.'")
 input("Jack: 'I just had a brain-wave at school in the middle of a boring lesson about ideas for this and the fight simulator.'")

@@ -76,4 +76,4 @@ elif FroggitDead == "Yes":
     print("You're a genocidal maniac!")
 elif FroggitSpared == "Yes":
     print("Well done for being good!")
-# It can't get to the above six lines for some reason? Plz help meh fix it.
+# It can't get to the above six lines for some reason? Plz help me fix it.

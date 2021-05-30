@@ -1,5 +1,15 @@
 # Undertale-In-Python
 
-This is the repository for Undertale.py. As I have finished working on this, I would like to give it out to the public to mess around with.
-I will be coming back here every once in a while to merge pull requests and things like that. (I don't really know what else because GitHub is complicated as hell for a teenager. Or maybe it's just me idk.) (Actually I'm kind of coding here when I feel like it in prep for my hopeful Year 9 course in computing)
-The Gamejolt page is here: https://gamejolt.com/games/undertalepython476/386188 but you should probably just download it here because I won't be updating that nearly as often. (if at all)
+This is the repository for Undertale In Python. This is a passion project I've had from a young age which has turned now into me looking back at my stupid mistakes I made when I was ten and making them not as bad. I will be updating this since I must prepare for Year 9 computing and have an almost resume of, "Hey, I'm not all dumb. Let me in."
+
+### Promotion
+
+The Gamejolt page is [here](https://gamejolt.com/games/undertalepython476/386188) but I will not be updating it regularly and will work on trying to move over to be fully a GitHub project.
+
+### How to download
+
+Download by clicking the big green Code button then download zip and, while you may have unnecessary files, you have the games. (I would use the releases tab but I make so many small changes after a big coding session there would be no point.)
+
+### Thank you
+
+Please enjoy this absolute mess of code and if you would be kind enough and have the know-how, please help me fix some bugs and make this presentable. Have a good time of day.

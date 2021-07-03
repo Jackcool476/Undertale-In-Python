@@ -3,14 +3,13 @@ FroggitAngry = 0
 FroggitDead = 0
 FroggitSpared = 0
 FroggitReadySpared = 0
-FroggitDamage1 = 1
-FroggitDamage2 = 5
 PlayerDead = 0
 HaveMonsterCandy = 1
 PlayerHealth = 20
 FroggitHealth = 20
 print("A lone Froggit bounces towards you.")
 print("They prepare for a fight!")
+# ? Make this not use variables since I don't think it needs them? Testing required
 while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
     print("")
     print("HP =", PlayerHealth)
@@ -31,37 +30,36 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
         if PlayerAct == "INSPECT" or PlayerAct == "inspect":
             print("You closely examine Froggit and learn some statistics.")
             print("")
+            print("Species = Frog")
             print("Height = 2 foot 5")
-            print("Gender = Identifies as Frog")
-            print("Sexuality = Ribbit")
+            print("Gender = Ribbit")
             if FroggitReadySpared == "1":
                 print("Relationship Status = A single pringle and ready to mingle... ;)")
             else:
-                print(
-                    "Relationship Status = Happily married with a spouse and 5 children.")
+                print("Relationship Status = Happily married with 2 children.")
             print("Health =", FroggitHealth)
         elif PlayerAct == "FLIRT" or PlayerAct == "flirt":
             if FroggitAngry == 1:
-                print(
-                    "Your flirty comment calmed the Froggit down a bit, but it wasn't enough to woo it.")
+                print("Your flirt calmed Froggit, but it wasn't enough to woo it.")
                 FroggitAngry = 0
             elif FroggitReadySpared == 1:
-                print(
-                    "Woah, do you want this to turn into a blossoming romance or what?")
+                print("Wait, do you want this to turn into a dating simulator? No!")
             else:
                 print("Froggit blushes!")
                 print("Froggit doesn't want to fight you anymore.")
                 FroggitReadySpared = 1
         elif PlayerAct == "THREAT" or PlayerAct == "threat":
             if FroggitReadySpared == 1:
-                print("Froggit lost the romantic feeling it had for you, but your ex-relationship was enough to stop it from getting too angry.")
+                # ? Make line not go big (make text smaller)
+                print(
+                    "Froggit lost the feelings it had, but stopped itself from getting angry.")
                 FroggitReadySpared = 0
             elif FroggitAngry == 0:
                 print("Froggit looks like it got angrier!")
                 print("Froggit will now deal more damage!")
                 FroggitAngry = 1
             else:
-                print("Froggit is too angry to listen to your remarks about it.")
+                print("Froggit is too angry to listen to anymore of your insults.")
         else:
             print("No time to do anything, Froggit is ready to fight!")
     elif BattleCommand == "ITEM" or BattleCommand == "item":
@@ -73,9 +71,9 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
                 if PlayerHealth > 20:
                     PlayerHealth = 20
                 HaveMonsterCandy = 0
-                print("You ate and now have", PlayerHealth, "health.")
+                print("You ate the candy and now have", PlayerHealth, "health.")
             else:
-                # Well now this one doesn't work. FRICK :(
+                #! Fix this at some point.
                 print("You decide not to use your candy.")
         else:
             print("You have no items to use.")
@@ -84,18 +82,17 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
         MercyCommand = input()
         if MercyCommand == "SPARE" or MercyCommand == "spare":
             if FroggitReadySpared == 1:
-                print("Froggit was happy that it didn't escalate any further.")
+                print("Froggit was happy that things didn't escalate further.")
                 FroggitSpared = 1
                 break
             else:
                 print("You'll need to woo it first. ;)")
         elif MercyCommand == "FLEE" or MercyCommand == "flee":
-            print(
-                "You realise that, in fight simulators like this, there is no overworld to run away to.")
+            print("You realise that, in fight simulators, there is nowhere to run to.")
         else:
             print("No time to run, Froggit is ready to fight!")
     else:
-        print("While you are thinking, Froggit attacks out of nowhere!")
+        print("While you were thinking, Froggit attacks out of nowhere!")
     if FroggitReadySpared == 0:
         FroggitAttacks = int(random.randint(1, 2))
         FroggitHits = int(random.randint(2, 5))
@@ -126,7 +123,7 @@ if PlayerDead == 1:
     print("")
     print("GAME OVER")
     print("")
-    print("Next time, try actually choosing between offence or defence and not messing around.")
+    print("Next time, try choosing between offence and defence and don't mess around.")
 elif FroggitDead == 1:
     print("")
     print("YOU WIN?")
@@ -134,9 +131,9 @@ elif FroggitDead == 1:
     if FroggitAngry == 1:
         print("At least you were defending yourself...")
     elif FroggitReadySpared == 1:
-        print("I mean come on. You were in a damn relationship. You disgust me.")
+        print("I mean come on. You were in a relationship! You disgust me.")
     else:
-        print("Why did you kill such an innocent creature! What did it do to you?!")
+        print("Why did you kill such an innocent creature! What did it do ever to you?!")
 elif FroggitSpared == 1:
     print("")
     print("YOU WIN!")

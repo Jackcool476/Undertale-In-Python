@@ -26,8 +26,8 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
             print("Froggit took", PlayerDamage, "damage.")
     elif BattleCommand == "ACT" or BattleCommand == "act":
         print("What do you want to do? INSPECT, FLIRT or THREAT?")
-        PlayerAct = input()
-        if PlayerAct == "INSPECT" or PlayerAct == "inspect":
+        ActCommand = input()
+        if ActCommand == "INSPECT" or ActCommand == "inspect":
             print("You closely inspect Froggit and learn some statistics.")
             print("")
             print("Species = Frog")
@@ -38,7 +38,7 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
             else:
                 print("Relationship Status = Happily married with 2 children.")
             print("HP =", FroggitHealth)
-        elif PlayerAct == "FLIRT" or PlayerAct == "flirt":
+        elif ActCommand == "FLIRT" or ActCommand == "flirt":
             if FroggitAngry == 1:
                 print("Your flirt calmed Froggit, but it wasn't enough to woo it.")
                 FroggitAngry = 0
@@ -48,7 +48,7 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
                 print("Froggit blushes!")
                 print("Froggit doesn't want to fight you anymore.")
                 FroggitReadySpared = 1
-        elif PlayerAct == "THREAT" or PlayerAct == "threat":
+        elif ActCommand == "THREAT" or ActCommand == "threat":
             if FroggitReadySpared == 1:
                 print("Froggit lost its feelings for you, but didn't get angry.")
                 FroggitReadySpared = 0
@@ -97,10 +97,10 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
         if FroggitAngry == 1:
             FroggitHits *= 2
         print("Froggit gets ready to attack you. Will you dodge LEFT or RIGHT?")
-        PlayerDodge = input()
-        if PlayerDodge == "LEFT" or PlayerDodge == "left":
+        DodgeCommand = input()
+        if DodgeCommand == "LEFT" or DodgeCommand == "left":
             PlayerDodged = 1
-        elif PlayerDodge == "RIGHT" or PlayerDodge == "right":
+        elif DodgeCommand == "RIGHT" or DodgeCommand == "right":
             PlayerDodged = 2
         else:
             PlayerDodged = 3

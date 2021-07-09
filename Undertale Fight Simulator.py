@@ -1,4 +1,5 @@
 import random
+JoeMama = 0
 FroggitAngry = 0
 FroggitDead = 0
 FroggitSpared = 0
@@ -9,8 +10,7 @@ PlayerHealth = 20
 FroggitHealth = 20
 print("A lone Froggit bounces towards you.")
 print("They prepare for a fight!")
-# ? Make this not use variables since I don't think it needs them? Testing required
-while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
+while JoeMama == 0:
     print("")
     print("HP =", PlayerHealth)
     print("")
@@ -131,7 +131,7 @@ elif FroggitDead == 1:
     elif FroggitReadySpared == 1:
         print("I mean come on. You were in a relationship! You disgust me.")
     else:
-        print("Why did you kill such an innocent creature! What did it do ever to you?!")
+        print("Why did you kill such an innocent creature! What did it ever do to you?!")
 elif FroggitSpared == 1:
     print("")
     print("YOU WIN!")

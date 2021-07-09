@@ -50,9 +50,7 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
                 FroggitReadySpared = 1
         elif PlayerAct == "THREAT" or PlayerAct == "threat":
             if FroggitReadySpared == 1:
-                # ? Make line not go big (make text smaller)
-                print(
-                    "Froggit lost the feelings it had, but stopped itself from getting angry.")
+                print("Froggit lost its feelings for you, but didn't get angry.")
                 FroggitReadySpared = 0
             elif FroggitAngry == 0:
                 print("Froggit looks like it got angrier!")

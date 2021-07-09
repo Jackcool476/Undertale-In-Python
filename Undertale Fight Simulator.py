@@ -1,5 +1,4 @@
 import random
-JoeMama = 0
 FroggitAngry = 0
 FroggitDead = 0
 FroggitSpared = 0
@@ -10,7 +9,7 @@ PlayerHealth = 20
 FroggitHealth = 20
 print("A lone Froggit bounces towards you.")
 print("They prepare for a fight!")
-while JoeMama == 0:
+while "According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible.":
     print("")
     print("HP =", PlayerHealth)
     print("")

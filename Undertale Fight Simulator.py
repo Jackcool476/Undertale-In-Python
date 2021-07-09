@@ -18,7 +18,7 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
     BattleCommand = input()
     if BattleCommand == "FIGHT" or BattleCommand == "fight":
         PlayerDamage = int(random.randint(2, 5))
-        FroggitHealth = FroggitHealth - PlayerDamage
+        FroggitHealth -= PlayerDamage
         if FroggitHealth == 0 or FroggitHealth < 0:
             FroggitDead = 1
             break
@@ -28,7 +28,7 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
         print("What do you want to do? INSPECT, FLIRT or THREAT?")
         PlayerAct = input()
         if PlayerAct == "INSPECT" or PlayerAct == "inspect":
-            print("You closely examine Froggit and learn some statistics.")
+            print("You closely inspect Froggit and learn some statistics.")
             print("")
             print("Species = Frog")
             print("Height = 2 foot 5")
@@ -37,7 +37,7 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
                 print("Relationship Status = A single pringle and ready to mingle... ;)")
             else:
                 print("Relationship Status = Happily married with 2 children.")
-            print("Health =", FroggitHealth)
+            print("HP =", FroggitHealth)
         elif PlayerAct == "FLIRT" or PlayerAct == "flirt":
             if FroggitAngry == 1:
                 print("Your flirt calmed Froggit, but it wasn't enough to woo it.")
@@ -65,11 +65,11 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
             print("Do you want to eat your Monster Candy? (YES or NO)")
             UseMonsterCandy = input()
             if UseMonsterCandy == "YES" or "yes":
-                PlayerHealth = PlayerHealth + 10
+                PlayerHealth += 10
                 if PlayerHealth > 20:
                     PlayerHealth = 20
                 HaveMonsterCandy = 0
-                print("You ate the candy and now have", PlayerHealth, "health.")
+                print("You ate the candy and now have", PlayerHealth, "HP.")
             else:
                 #! Fix this at some point.
                 print("You decide not to use your candy.")
@@ -107,7 +107,7 @@ while FroggitDead == 0 or FroggitSpared == 0 or PlayerDead == 0:
             print("While you were choosing which way to go, Froggit attacked!")
         if FroggitAttacks == 1 and PlayerDodged == 1 or FroggitAttacks == 2 and PlayerDodged == 2 or PlayerDodged == 3:
             print("You took", FroggitHits, "damage.")
-            PlayerHealth = PlayerHealth - FroggitHits
+            PlayerHealth -= FroggitHits
             if PlayerHealth == 0 or PlayerHealth < 0:
                 PlayerDead = 1
                 break

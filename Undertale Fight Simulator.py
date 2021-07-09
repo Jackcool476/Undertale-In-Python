@@ -64,14 +64,13 @@ while JoeMama == 0:
         if HaveMonsterCandy == 1:
             print("Do you want to eat your Monster Candy? (YES or NO)")
             UseMonsterCandy = input()
-            if UseMonsterCandy == "YES" or "yes":
+            if UseMonsterCandy == "YES" or UseMonsterCandy == "yes":
                 PlayerHealth += 10
                 if PlayerHealth > 20:
                     PlayerHealth = 20
                 HaveMonsterCandy = 0
                 print("You ate the candy and now have", PlayerHealth, "HP.")
             else:
-                #! Fix this at some point.
                 print("You decide not to use your candy.")
         else:
             print("You have no items to use.")

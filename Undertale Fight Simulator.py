@@ -32,7 +32,7 @@ while "According to all known laws of aviation, there is no way that a bee shoul
             print("Species = Frog")
             print("Height = 2 foot 5")
             print("Gender = Ribbit")
-            if FroggitReadySpared == "1":
+            if FroggitReadySpared == 1:
                 print("Relationship Status = A single pringle and ready to mingle... ;)")
             else:
                 print("Relationship Status = Happily married with 2 children.")

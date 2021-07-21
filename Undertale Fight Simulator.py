@@ -22,7 +22,7 @@ while "According to all known laws of aviation, there is no way that a bee shoul
             FroggitDead = 1
             break
         else:
-            print("Froggit took", PlayerDamage, "damage.")
+            print("Froggit lost", PlayerDamage, "HP.")
     elif BattleCommand == "ACT" or BattleCommand == "act":
         print("What do you want to do? INSPECT, FLIRT or THREAT?")
         ActCommand = input()
@@ -104,7 +104,7 @@ while "According to all known laws of aviation, there is no way that a bee shoul
             PlayerDodged = 3
             print("While you were choosing which way to go, Froggit attacked!")
         if FroggitAttacks == 1 and PlayerDodged == 1 or FroggitAttacks == 2 and PlayerDodged == 2 or PlayerDodged == 3:
-            print("You took", FroggitHits, "damage.")
+            print("You lost", FroggitHits, "HP.")
             PlayerHealth -= FroggitHits
             if PlayerHealth == 0 or PlayerHealth < 0:
                 PlayerDead = 1

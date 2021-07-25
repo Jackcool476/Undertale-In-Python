@@ -4,7 +4,7 @@ FroggitDead = 0
 FroggitSpared = 0
 FroggitReadySpared = 0
 PlayerDead = 0
-HaveMonsterCandy = 1
+MonsterCandy = 1
 PlayerHealth = 20
 FroggitHealth = 20
 print("A lone Froggit bounces towards you.")
@@ -60,17 +60,21 @@ while "According to all known laws of aviation, there is no way that a bee shoul
         else:
             print("No time to do anything, Froggit is ready to fight!")
     elif BattleCommand == "ITEM" or BattleCommand == "item":
-        if HaveMonsterCandy == 1:
-            print("Do you want to eat your Monster Candy? (YES or NO)")
+        if MonsterCandy > 0:
+            if MonsterCandy == 1:
+                print("You have", MonsterCandy, "candy.")
+            else:
+                print("You have", MonsterCandy, "candies. (nuts)")
+            print("Do you want to eat one Monster Candy? (YES or NO)")
             UseMonsterCandy = input()
             if UseMonsterCandy == "YES" or UseMonsterCandy == "yes":
                 PlayerHealth += 10
                 if PlayerHealth > 20:
                     PlayerHealth = 20
-                HaveMonsterCandy = 0
-                print("You ate the candy and now have", PlayerHealth, "HP.")
+                MonsterCandy -= 1
+                print("You ate a candy and now have", PlayerHealth, "HP.")
             else:
-                print("You decide not to use your candy.")
+                print("You decide not to use a candy.")
         else:
             print("You have no items to use.")
     elif BattleCommand == "MERCY" or BattleCommand == "mercy":

@@ -6,7 +6,7 @@ FroggitReadySpared = 0
 PlayerDead = 0
 MonsterCandy = 1
 PlayerHealth = 20
-FroggitHealth = 0
+FroggitHealth = 20
 print("A lone Froggit bounces towards you.")
 print("They prepare for a fight!")
 while "According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible.":

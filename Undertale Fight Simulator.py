@@ -65,8 +65,8 @@ while "According to all known laws of aviation, there is no way that a bee shoul
             else:
                 print("You have", MonsterCandy, "candies. (nuts)")
             print("Do you want to eat one Monster Candy? (YES or NO)")
-            UseMonsterCandy = input()
-            if UseMonsterCandy == "YES" or UseMonsterCandy == "yes":
+            UseItem = input()
+            if UseItem == "YES" or UseItem == "yes":
                 PlayerHealth += 10
                 if PlayerHealth > 20:
                     PlayerHealth = 20

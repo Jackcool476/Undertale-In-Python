@@ -6,13 +6,57 @@ FroggitSpared = 0
 PlayerDead = 0
 FroggitCalmed = 0
 FroggitAngered = 0
+FroggitBurnt = 0
 MonsterCandy = 1
-PlayerMinDamage = 2
-PlayerMaxDamage = 5
+BurnEnabled = 0
 PlayerArmour = 1
-print("A lone Froggit bounces towards you.")
-print("They prepare for a fight!")
+print("You wake up in a dark and damp room.")
+print("Suddenly the lights turn on!")
+print("An ominous voice bellows from above.")
+print("???: 'There are some things in front of you.")
+print("You see two piles, one for weapons and one for armour.")
+print("???: 'You must take one of each to prepare.")
+print("You wonder what for, but decide not to question it.")
+print("You walk over to the pile of weapons and decide which one to pick.")
+input("Option A: Stick - A normal stick lying next to the other weapons. It won't do much, but it's better than nothing.") #* Normal Mode
+input("Option B: Burnt Pan - Hot to the touch. Lifting it, you feel enough weight to knock someone out.") #? Easy Mode
+input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.") #! Hard Mode
+WeaponList = ["A", "B", "C", "a", "b", "c"]
+print("Which weapon do you want? A, B or C?")
+WeaponChoice = input()
+if WeaponChoice not in WeaponList:
+    WeaponChoice = random.choice(WeaponList)
+    print("You can't decide which weapon to choose.")
+    print("You shut your eyes and pick a random one.")
+if WeaponChoice == "A" or WeaponChoice == "a":
+    PlayerMinDamage = 2
+    PlayerMaxDamage = 5
+    print("You choose the stick.")
+    print("You wield the stick and feel like a kid. You remember that you don't even know how old you are.")
+elif WeaponChoice == "B" or WeaponChoice == "b":
+    PlayerMinDamage = 5
+    PlayerMaxDamage = 7
+    BurnEnabled = 1
+    print("You choose the pan.")
+    print("You wield the pan and flip it in your hand. You might have been a chef before you came to this place.")
+elif WeaponChoice == "C" or WeaponChoice == "c":
+    PlayerMinDamage = 0
+    PlayerMaxDamage = 1
+    print("You choose the toy knife.")
+    print("You wield the toy and throw it into the air. You catch it easily and think about why you chose it. You can't find a good reason.")
+print("A Froggit bounces towards you.")
+print("It prepares for a fight!")
+
 while "According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible.":
+    if FroggitBurnt >= 1:
+            print("The froggit was burnt and lost 2 HP.")
+            FroggitHealth -= 2
+            FroggitBurnt -= 1
+            if FroggitHealth <= 0:
+                FroggitDead = 1
+                break
+            if FroggitBurnt < 1:
+                print("The froggit stopped burning.")
     print("")
     print("HP =", PlayerHealth)
     print("")
@@ -21,7 +65,16 @@ while "According to all known laws of aviation, there is no way that a bee shoul
     if BattleCommand == "FIGHT" or BattleCommand == "fight":
         PlayerDamage = int(random.randint(PlayerMinDamage, PlayerMaxDamage))
         FroggitHealth -= PlayerDamage
-        print("Froggit lost", PlayerDamage, "HP.")
+        if PlayerDamage <= 0:
+            print("Your weapon didn't do any damage at all!")
+        else:
+            print("Froggit lost", PlayerDamage, "HP.")
+        if BurnEnabled == 1 and FroggitBurnt <= 0:
+            BurnChance = int(random.randint(1,2))
+            if BurnChance == 1:
+                FroggitHealth -= 2
+                print("The red-hot pan began to burn Froggit. It lost 2 HP.")
+                FroggitBurnt = 1
         if FroggitHealth <= 0:
             FroggitDead = 1
             break
@@ -64,10 +117,10 @@ while "According to all known laws of aviation, there is no way that a bee shoul
     elif BattleCommand == "ITEM" or BattleCommand == "item":
         if MonsterCandy > 0:
             if MonsterCandy == 1:
-                print("You have", MonsterCandy, "candy.")
+                print("You have one candy.")
             else:
-                print("You have", MonsterCandy, "candies. (nuts)")
-            print("Do you want to eat one Monster Candy? (YES or NO)")
+                print("You have", MonsterCandy, "candies. (nuts :) )")
+            print("Do you want to eat a Monster Candy? (YES or NO)")
             ItemCommand = input()
             if ItemCommand == "YES" or ItemCommand == "yes":
                 PlayerHealth += 10
@@ -111,6 +164,7 @@ while "According to all known laws of aviation, there is no way that a bee shoul
             print("While you were choosing which way to go, Froggit attacked!")
         if FroggitAttackPos == 1 and PlayerDodgePos == 1 or FroggitAttackPos == 2 and PlayerDodgePos == 2 or PlayerDodgePos == 3:
             FroggitDamage /= PlayerArmour
+            FroggitDamage = round(FroggitDamage)
             PlayerHealth -= FroggitDamage
             print("You lost", FroggitDamage, "HP.")
             if PlayerHealth == 0 or PlayerHealth < 0:
@@ -119,7 +173,7 @@ while "According to all known laws of aviation, there is no way that a bee shoul
         elif FroggitAttackPos == 1 and PlayerDodgePos == 2 or FroggitAttackPos == 2 and PlayerDodgePos == 1:
             print("You dodged the attack.")
     else:
-        print("Froggit looks like its waiting for you to do something.")
+        print("Froggit looks like it's waiting for you to do something.")
 if PlayerDead == 1:
     print("")
     print("HP = 0")

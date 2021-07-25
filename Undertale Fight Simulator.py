@@ -7,6 +7,9 @@ PlayerDead = 0
 FroggitCalmed = 0
 FroggitAngered = 0
 MonsterCandy = 1
+PlayerMinDamage = 2
+PlayerMaxDamage = 5
+PlayerArmour = 1
 print("A lone Froggit bounces towards you.")
 print("They prepare for a fight!")
 while "According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible.":
@@ -16,7 +19,7 @@ while "According to all known laws of aviation, there is no way that a bee shoul
     print("Use FIGHT, ACT, ITEM or MERCY")
     BattleCommand = input()
     if BattleCommand == "FIGHT" or BattleCommand == "fight":
-        PlayerDamage = int(random.randint(2, 5))
+        PlayerDamage = int(random.randint(PlayerMinDamage, PlayerMaxDamage))
         FroggitHealth -= PlayerDamage
         print("Froggit lost", PlayerDamage, "HP.")
         if FroggitHealth <= 0:
@@ -107,8 +110,9 @@ while "According to all known laws of aviation, there is no way that a bee shoul
             PlayerDodgePos = 3
             print("While you were choosing which way to go, Froggit attacked!")
         if FroggitAttackPos == 1 and PlayerDodgePos == 1 or FroggitAttackPos == 2 and PlayerDodgePos == 2 or PlayerDodgePos == 3:
-            print("You lost", FroggitDamage, "HP.")
+            FroggitDamage /= PlayerArmour
             PlayerHealth -= FroggitDamage
+            print("You lost", FroggitDamage, "HP.")
             if PlayerHealth == 0 or PlayerHealth < 0:
                 PlayerDead = 1
                 break

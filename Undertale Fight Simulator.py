@@ -19,12 +19,12 @@ def main():
     print("???: 'You must take one of each to prepare.")
     print("You wonder what for, but decide not to question it.")
     input("You walk over to the pile of weapons and decide which one to pick.")
-    # * Normal Mode
     input("Option A: Stick - A normal stick lying next to the other weapons. It won't do much, but it's better than nothing.")
-    # ? Easy Mode
+    # * Normal Mode
     input("Option B: Burnt Pan - Hot to the touch. Lifting it, you feel enough weight to knock someone out.")
-    # ! Hard Mode
+    # ? Easy Mode
     input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.")
+    # ! Hard Mode
     WeaponList = ["a", "b", "c"]
     print("Which weapon do you want? A, B or C?")
     WeaponChoice = input().lower()

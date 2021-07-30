@@ -15,7 +15,7 @@ def main():
     print("Suddenly the lights turn on!")
     print("An ominous voice bellows from above.")
     print("???: 'There are some things in front of you.")
-    print("You see two piles, one for weapons and one for armour.")
+    print("You see two piles, one with weapons and one with armour.")
     print("???: 'You must take one of each to prepare.")
     print("You wonder what for, but decide not to question it.")
     input("You walk over to the pile of weapons and decide which one to pick.")
@@ -31,12 +31,12 @@ def main():
     if WeaponChoice not in WeaponList:
         WeaponChoice = random.choice(WeaponList)
         print("You can't decide which weapon to choose.")
-        print("You shut your eyes and pick a random one.")
+        print("You close your eyes and pick out a random one.")
     if WeaponChoice == "a":
         PlayerMinDamage = 2
         PlayerMaxDamage = 5
         print("You choose the stick.")
-        input("You wield the stick and feel like a kid. You remember that you don't even know how old you are.")
+        input("You wield the stick and feel like a kid. You realise that you don't even know how old you are.")
     elif WeaponChoice == "b":
         PlayerMinDamage = 5
         PlayerMaxDamage = 7
@@ -197,8 +197,7 @@ def main():
         elif FroggitCalmed == 1:
             print("I mean come on. You were in a relationship! You disgust me.")
         else:
-            print(
-                "Why did you kill such an innocent creature! What did it ever do to you?!")
+            print("Why would you kill an innocent creature! What did it ever do to you?!")
     elif FroggitSpared == 1:
         print()
         print("YOU WIN!")

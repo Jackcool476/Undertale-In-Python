@@ -17,10 +17,10 @@ print("???: 'There are some things in front of you.")
 print("You see two piles, one for weapons and one for armour.")
 print("???: 'You must take one of each to prepare.")
 print("You wonder what for, but decide not to question it.")
-print("You walk over to the pile of weapons and decide which one to pick.")
-input("Option A: Stick - A normal stick lying next to the other weapons. It won't do much, but it's better than nothing.") #* Normal Mode
-input("Option B: Burnt Pan - Hot to the touch. Lifting it, you feel enough weight to knock someone out.") #? Easy Mode
-input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.") #! Hard Mode
+input("You walk over to the pile of weapons and decide which one to pick.")
+input("Option A: Stick - A normal stick lying next to the other weapons. It won't do much, but it's better than nothing.")  # * Normal Mode
+input("Option B: Burnt Pan - Hot to the touch. Lifting it, you feel enough weight to knock someone out.")  # ? Easy Mode
+input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.")  # ! Hard Mode
 WeaponList = ["A", "B", "C", "a", "b", "c"]
 print("Which weapon do you want? A, B or C?")
 WeaponChoice = input()
@@ -32,31 +32,31 @@ if WeaponChoice == "A" or WeaponChoice == "a":
     PlayerMinDamage = 2
     PlayerMaxDamage = 5
     print("You choose the stick.")
-    print("You wield the stick and feel like a kid. You remember that you don't even know how old you are.")
+    input("You wield the stick and feel like a kid. You remember that you don't even know how old you are.")
 elif WeaponChoice == "B" or WeaponChoice == "b":
     PlayerMinDamage = 5
     PlayerMaxDamage = 7
     BurnEnabled = 1
     print("You choose the pan.")
-    print("You wield the pan and flip it in your hand. You might have been a chef before you came to this place.")
+    input("You wield the pan and flip it in your hand. You might have been a chef before you came to this place.")
 elif WeaponChoice == "C" or WeaponChoice == "c":
     PlayerMinDamage = 0
     PlayerMaxDamage = 1
     print("You choose the toy knife.")
-    print("You wield the toy and throw it into the air. You catch it easily and think about why you chose it. You can't find a good reason.")
+    input("You wield the toy and throw it into the air. You catch it easily and think about why you chose it. You can't find a good reason.")
 print("A Froggit bounces towards you.")
 print("It prepares for a fight!")
 
 while "According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible.":
     if FroggitBurnt >= 1:
-            print("The froggit was burnt and lost 2 HP.")
-            FroggitHealth -= 2
-            FroggitBurnt -= 1
-            if FroggitHealth <= 0:
-                FroggitDead = 1
-                break
-            if FroggitBurnt < 1:
-                print("The froggit stopped burning.")
+        print("The froggit was burnt and lost 2 HP.")
+        FroggitHealth -= 2
+        FroggitBurnt -= 1
+        if FroggitHealth <= 0:
+            FroggitDead = 1
+            break
+        if FroggitBurnt < 1:
+            print("The froggit stopped burning.")
     print("")
     print("HP =", PlayerHealth)
     print("")
@@ -70,7 +70,7 @@ while "According to all known laws of aviation, there is no way that a bee shoul
         else:
             print("Froggit lost", PlayerDamage, "HP.")
         if BurnEnabled == 1 and FroggitBurnt <= 0:
-            BurnChance = int(random.randint(1,2))
+            BurnChance = int(random.randint(1, 2))
             if BurnChance == 1:
                 FroggitHealth -= 2
                 print("The red-hot pan began to burn Froggit. It lost 2 HP.")
@@ -104,7 +104,7 @@ while "According to all known laws of aviation, there is no way that a bee shoul
                 FroggitCalmed = 1
         elif ActCommand == "THREAT" or ActCommand == "threat":
             if FroggitCalmed == 1:
-                print("Froggit lost its feelings for you, but didn't get angry.")
+                print("Froggit lost its feelings for you, but it didn't get angry.")
                 FroggitCalmed = 0
             elif FroggitAngered == 0:
                 print("Froggit looks like it got angrier!")

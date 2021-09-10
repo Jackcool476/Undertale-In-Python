@@ -1,6 +1,5 @@
 # Undertale in Python
 
----
 This is the repository for Undertale in Python. This is a passion project I've had from a young age which has turned now into me looking back at my stupid mistakes I made when I was 10 and making them not as bad. I will be updating this sometimes since I must prepare for Year 9 computing,
 
 ## How to Download

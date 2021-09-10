@@ -1,5 +1,6 @@
 def main():
     import random
+
     PlayerHealth = 20
     FroggitHealth = 20
     FroggitDead = 0
@@ -19,11 +20,17 @@ def main():
     print("???: 'You must take one of each to prepare.")
     print("You wonder what for, but decide not to question it.")
     input("You walk over to the pile of weapons and decide which one to pick.")
-    input("Option A: Stick - A normal stick lying next to the other weapons. It won't do much, but it's better than nothing.")
+    input(
+        "Option A: Stick - A normal stick lying next to the other weapons. It won't do much, but it's better than nothing."
+    )
     # * Normal Mode
-    input("Option B: Burnt Pan - Hot to the touch. Lifting it, you feel enough weight to knock someone out.")
+    input(
+        "Option B: Burnt Pan - Hot to the touch. Lifting it, you feel enough weight to knock someone out."
+    )
     # ? Easy Mode
-    input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.")
+    input(
+        "Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone."
+    )
     # ! Hard Mode
     WeaponList = ["a", "b", "c"]
     print("Which weapon do you want? A, B or C?")
@@ -36,18 +43,25 @@ def main():
         PlayerMinDamage = 2
         PlayerMaxDamage = 5
         print("You choose the stick.")
-        input("You wield the stick and feel like a kid. You realise that you don't even know how old you are.")
+        input(
+            "You wield the stick and feel like a kid. You realise that you don't even know how old you are."
+        )
     elif WeaponChoice == "b":
         PlayerMinDamage = 5
         PlayerMaxDamage = 7
         BurnEnabled = 1
         print("You choose the pan.")
-        input("You wield the pan and flip it in your hand. You might have been a chef before you came to this place.")
+        input(
+            "You wield the pan and flip it in your hand. You might have been a chef before you came to this place."
+        )
     elif WeaponChoice == "c":
         PlayerMinDamage = 0
         PlayerMaxDamage = 1
         print("You choose the toy knife.")
-        input("You wield the toy and throw it into the air. You catch it easily and think about why you chose it. You can't find a good reason.")
+        input(
+            "You wield the toy and throw it into the air. You catch it easily and think about why you chose it. You can't find a good reason."
+        )
+    print()
     print("A Froggit bounces towards you.")
     print("It prepares for a fight!")
 
@@ -67,11 +81,10 @@ def main():
         print("Use FIGHT, ACT, ITEM or MERCY")
         BattleCommand = input().lower()
         if BattleCommand == "fight":
-            PlayerDamage = int(random.randint(
-                PlayerMinDamage, PlayerMaxDamage))
+            PlayerDamage = int(random.randint(PlayerMinDamage, PlayerMaxDamage))
             FroggitHealth -= PlayerDamage
             if PlayerDamage <= 0:
-                print("Your weapon didn't do any damage at all!")
+                print("Your weapon did no damage!")
             else:
                 print("Froggit lost", PlayerDamage, "HP.")
             if BurnEnabled == 1 and FroggitBurnt <= 0:
@@ -94,7 +107,8 @@ def main():
                 print("Gender = Ribbit")
                 if FroggitCalmed == 1:
                     print(
-                        "Relationship Status = A single pringle and ready to mingle... ;)")
+                        "Relationship Status = A single pringle and ready to mingle... ;)"
+                    )
                 else:
                     print("Relationship Status = Happily married with 2 children.")
                 print("HP =", FroggitHealth)
@@ -150,7 +164,8 @@ def main():
                     print("You'll need to woo it first. ;)")
             elif MercyCommand == "flee":
                 print(
-                    "You realise that, in fight simulators, there is nowhere to run to.")
+                    "You realise that, in fight simulators, there is nowhere to run to."
+                )
             else:
                 print("No time to run, Froggit is ready to fight!")
         else:
@@ -187,7 +202,9 @@ def main():
         print()
         print("GAME OVER")
         print()
-        print("Next time, try choosing between offence and defence and don't mess around.")
+        print(
+            "Next time, try choosing between offence and defence and don't mess around."
+        )
     elif FroggitDead == 1:
         print()
         print("YOU WIN?")
@@ -197,7 +214,9 @@ def main():
         elif FroggitCalmed == 1:
             print("I mean come on. You were in a relationship! You disgust me.")
         else:
-            print("Why would you kill an innocent creature! What did it ever do to you?!")
+            print(
+                "Why would you kill an innocent creature! What did it ever do to you?!"
+            )
     elif FroggitSpared == 1:
         print()
         print("YOU WIN!")

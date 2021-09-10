@@ -102,10 +102,14 @@ if FollowToriel == "Yes":
     input("'Are you coming or not, my child?'")
     input("You continue into a room with a Froggit in it.")
     input("Froggit bounces towards yo-")
-    input("You hear a voice on the wind, Jack: 'Play Undertale Fight Simulator Beta for that, oooooooooooo'")
+    input(
+        "You hear a voice on the wind, Jack: 'Play Undertale Fight Simulator Beta for that, oooooooooooo'"
+    )
     input("'Link on the Github page! ohohohhoohohhoho'")
     input("You turn to face at a room of spikes.")
-    input("'Look at this, my child, it is a puzzle! You probably shouldn't do that, not without my help?'")
+    input(
+        "'Look at this, my child, it is a puzzle! You probably shouldn't do that, not without my help?'"
+    )
     print("Do it by yourself anyway?")
     SpikePuzzle = input()
     if SpikePuzzle == "Yes":
@@ -116,10 +120,14 @@ if FollowToriel == "Yes":
         input("SPIKES, YOU IDIOT!")
     if SpikePuzzle == "No":
         print("'Ok then, my child!'")
-        input("Toriel, looking as if she knew how to get through here of by heart, took you across.")
+        input(
+            "Toriel, looking as if she knew how to get through here of by heart, took you across."
+        )
         input("'Onward!'")
         input("You enter a long hallway,")
-        input("'Now, you must have a small test. Do not worry, it is only a test of independence.'")
+        input(
+            "'Now, you must have a small test. Do not worry, it is only a test of independence.'"
+        )
         input("'You must walk across this hallway, by yourself. Easy enough, right?'")
         print("She runs off, should you follow her?")
         FollowToriel2 = input()
@@ -145,14 +153,22 @@ if FollowToriel == "Yes":
                 input("YOU DIED!")
                 input("Cause:")
                 input(
-                    Name, "is rubbish at singing. So bad, that it killed you. Well done. Oh, also copyright issues.")
+                    Name,
+                    "is rubbish at singing. So bad, that it killed you. Well done. Oh, also copyright issues.",
+                )
             if SingSong == "No":
                 print("ahhhhh come on!")
                 input("meanie")
                 input("Fine, let's just get this over and done wi-")
-input("???: 'Hello again! I see you've downloaded this for the 7th time. Well done to you. Oh yeah, I'm Jack btw.'")
+input(
+    "???: 'Hello again! I see you've downloaded this for the 7th time. Well done to you. Oh yeah, I'm Jack btw.'"
+)
 input("Jack: 'I may have sort-of kind-of lied about leaving this project alone.'")
-input("Jack: 'I just had a brain-wave at school in the middle of a boring lesson about ideas for this and the fight simulator.'")
+input(
+    "Jack: 'I just had a brain-wave at school in the middle of a boring lesson about ideas for this and the fight simulator.'"
+)
 input("Jack: 'I probably won't continue with this but I might come back to it. Maybe.'")
-input("Jack: 'Well, you should go continue on with your day. You might be having fun. Unlike me. :('")
+input(
+    "Jack: 'Well, you should go continue on with your day. You might be having fun. Unlike me. :('"
+)
 print("END")

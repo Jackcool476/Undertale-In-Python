@@ -1,6 +1,6 @@
-def main():
-    import random
+import random
 
+def main():
     PlayerHealth = 20
     FroggitHealth = 20
     FroggitDead = 0
@@ -8,7 +8,7 @@ def main():
     PlayerDead = 0
     FroggitCalmed = 0
     FroggitAngered = 0
-    FroggitBurnt = 0
+    FroggitBurnTime = 0
     MonsterCandy = 1
     BurnEnabled = 0
     PlayerArmour = 1
@@ -19,9 +19,9 @@ def main():
     print("???: 'You must take one of each to prepare.")
     print("You wonder what for, but decide not to question it.")
     input("You look down at the weapons and think about which to pick.")
-    input("Option A: Stick - Only being small, it won't do much, but it's better than nothing.")  # * Normal Mode
-    input("Option B: Burnt Pan - Hot to the touch. Lifting it, it feels heavy enough to knock someone out.")  # ? Easy Mode
-    input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.")  # ! Hard Mode
+    input("Option A: Stick - Only being small, it won't do much, but it's better than nothing.")  #* Normal Mode
+    input("Option B: Burnt Pan - Hot to the touch. Lifting it, it feels heavy enough to knock someone out.")  #? Easy Mode
+    input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.")  #! Hard Mode
     WeaponList = ["a", "b", "c"]
     print("Which weapon do you want? A, B or C?")
     WeaponChoice = input().lower()
@@ -29,36 +29,35 @@ def main():
         WeaponChoice = random.choice(WeaponList)
         print("You can't decide which weapon to choose.")
         print("The voice speaks again.")
-        print("???: 'You really can't choose? Fine. I'll pick. Take Option ", WeaponChoice, ".",)
+        print("???: 'You really can't choose? Fine. Take Option", WeaponChoice.upper())
     if WeaponChoice == "a":
         PlayerMinDamage = 2
         PlayerMaxDamage = 5
-        print("You choose the stick.")
-        input("You wield the stick and feel like a kid. You realise that you don't even know how old you are.")
+        print("You pick up the stick.")
     elif WeaponChoice == "b":
         PlayerMinDamage = 5
         PlayerMaxDamage = 7
         BurnEnabled = 1
-        print("You choose the pan.")
-        input("You wield the pan and flip it in your hand. You might have been a chef before you came to this place.")
+        print("You pick up the pan.")
     elif WeaponChoice == "c":
         PlayerMinDamage = 0
         PlayerMaxDamage = 1
-        print("You choose the toy knife.")
-        input("You wield the toy and throw it into the air. You catch it easily and think about why you chose it. You can't find a good reason.")
+        print("You pick up the toy knife.")
+    print()
+    print("???: ''")
     print()
     print("A Froggit bounces towards you.")
     print("It prepares for a fight!")
 
     while "According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible.":
-        if FroggitBurnt >= 1:
+        if FroggitBurnTime >= 1:
             print("The froggit was burnt and lost 2 HP.")
             FroggitHealth -= 2
-            FroggitBurnt -= 1
+            FroggitBurnTime -= 1
             if FroggitHealth <= 0:
                 FroggitDead = 1
                 break
-            if FroggitBurnt < 1:
+            if FroggitBurnTime < 1:
                 print("The froggit stopped burning.")
         print()
         print("HP =", PlayerHealth)
@@ -72,17 +71,15 @@ def main():
                 print("Your weapon did no damage!")
             else:
                 print("Froggit lost", PlayerDamage, "HP.")
-            if BurnEnabled == 1 and FroggitBurnt <= 0:
-                BurnChance = int(random.randint(1, 2))
-                if BurnChance == 1:
-                    FroggitHealth -= 2
-                    print("The red-hot pan began to burn Froggit. It lost 2 HP.")
-                    FroggitBurnt = 1
+            if BurnEnabled == 1 and FroggitBurnTime <= 0 and int(random.randint(1, 2)) == 1:
+                FroggitHealth -= 2
+                print("The red-hot pan began to burn Froggit. It lost 2 HP.")
+                FroggitBurnTime = 1
             if FroggitHealth <= 0:
                 FroggitDead = 1
                 break
         elif BattleCommand == "act":
-            print("What do you want to do? INSPECT, FLIRT or THREAT?")
+            print("What do you want to do? INSPECT, FLIRT or THREAT")
             ActCommand = input().lower()
             if ActCommand == "inspect":
                 print("You closely inspect Froggit and learn some statistics.")
@@ -122,7 +119,7 @@ def main():
                 if MonsterCandy == 1:
                     print("You have one candy.")
                 else:
-                    print("You have", MonsterCandy, "candies. (nuts :) )")
+                    print("You have", MonsterCandy, "candies. nuts :)")
                 print("Do you want to eat a Monster Candy? (YES or NO)")
                 ItemCommand = input().lower()
                 if ItemCommand == "yes":
@@ -150,7 +147,7 @@ def main():
             else:
                 print("No time to run, Froggit is ready to fight!")
         else:
-            print("While you were thinking, Froggit attacks out of nowhere!")
+            print("While you were thinking, Froggit attacks!")
         if FroggitCalmed == 0:
             FroggitAttackPos = int(random.randint(1, 2))
             FroggitDamage = int(random.randint(2, 5))
@@ -183,7 +180,7 @@ def main():
         print()
         print("GAME OVER")
         print()
-        print("Next time, try choosing between offence and defence and don't mess around.")
+        print("Next time, try choosing between offence and defence.")
     elif FroggitDead == 1:
         print()
         print("YOU WIN?")

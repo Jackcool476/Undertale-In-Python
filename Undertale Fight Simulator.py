@@ -3,18 +3,18 @@ import random
 def main():
     PlayerHealth = 20
     FroggitHealth = 20
+    PlayerDead = 0
     FroggitDead = 0
     FroggitSpared = 0
-    PlayerDead = 0
     FroggitCalmed = 0
     FroggitAngered = 0
     FroggitBurnTime = 0
-    MonsterCandy = 1
     BurnEnabled = 0
-    PlayerArmour = 1
+    WeaponList = ["a", "b", "c"]
+    ArmourList = ["a", "b", "c"]
     print("You wake up in a dark and damp room.")
     print("Suddenly, the lights turn on!")
-    print("You notice some items in front of you, a few weapons and some armour.")
+    print("You notice some items in front of you, a few weapons and some pieces of armour.")
     print("An ominous voice bellows at you from above.")
     print("???: 'You must take one of each to prepare.")
     print("You wonder what for, but decide not to question it.")
@@ -22,7 +22,6 @@ def main():
     input("Option A: Stick - Only being small, it won't do much, but it's better than nothing.")  #* Normal Mode
     input("Option B: Burnt Pan - Hot to the touch. Lifting it, it feels heavy enough to knock someone out.")  #? Easy Mode
     input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.")  #! Hard Mode
-    WeaponList = ["a", "b", "c"]
     print("Which weapon do you want? A, B or C?")
     WeaponChoice = input().lower()
     if WeaponChoice not in WeaponList:
@@ -30,6 +29,7 @@ def main():
         print("You can't decide which weapon to choose.")
         print("The voice speaks again.")
         print("???: 'You really can't choose? Fine. Take Option", WeaponChoice.upper())
+        DumbLevel = 1
     if WeaponChoice == "a":
         PlayerMinDamage = 2
         PlayerMaxDamage = 5
@@ -44,8 +44,43 @@ def main():
         PlayerMaxDamage = 1
         print("You pick up the toy knife.")
     print()
-    print("???: ''")
+    print("???: 'Good, now pick something to defend yourself with.'")
+    input("You take a closer look at the armour in front of you.")
+    input("Option A: Faded Ribbon - A red ribbon that has long lost its lustre. You'd look cute enough to not attack with it on.")  #* Normal Mode
+    input("Option B: Manly Bandana - A small bandana that has some abs drawn on. With it on, you'll have protection from its sheer manliness.") #? Easy Mode
+    input("Option C: Bandage - An old, worn piece of cloth that won't protect you from anything.") #! Hard Mode
+    print("Which piece of armour do you want? A, B or C?")
+    ArmourChoice = input().lower()
+    if ArmourChoice not in ArmourList:
+        ArmourChoice = random.choice(ArmourList)
+        if DumbLevel == 1:
+            print("*no thoughts, head empty*")
+            print("???: 'Again! Really, are you that stupid?! Ok, fine. Take Option", ArmourChoice.upper())
+        else:
+            print("You can't decide what piece of armour to choose.")
+            print("???: 'Fine, I'll pick. Take Option", ArmourChoice.upper())
+        DumbLevel += 1
+    if ArmourChoice == "a":
+        PlayerArmourLevel = 1
+        print("You put on the ribbon.")
+    elif ArmourChoice == "b":
+        PlayerArmourLevel = 2
+        print("You put on the bandana.")
+    elif ArmourChoice == "c":
+        PlayerArmourLevel = 0
+        print("You apply the bandage.")
     print()
+    print("You notice a monster candy in the corner of the room.")
+    print("Do you want to pick it up?")
+    ChooseItem = input().lower()
+    if ChooseItem == "yes":
+        print("You pick up the candy and put it in your back pocket.")
+        MonsterCandy = 1
+    else:
+        print("You decide not to.")
+    print()
+    print("???: 'Great. Now you're ready.'")
+    print("'Ready for what?' You wonder, but before you can say anything -")
     print("A Froggit bounces towards you.")
     print("It prepares for a fight!")
 
@@ -163,8 +198,7 @@ def main():
                 PlayerDodgePos = 3
                 print("While you were choosing which way to go, Froggit attacked!")
             if FroggitAttackPos == PlayerDodgePos or PlayerDodgePos == 3:
-                FroggitDamage /= PlayerArmour
-                FroggitDamage = round(FroggitDamage)
+                FroggitDamage -= PlayerArmourLevel
                 PlayerHealth -= FroggitDamage
                 print("You lost", FroggitDamage, "HP.")
                 if PlayerHealth == 0 or PlayerHealth < 0:
@@ -180,25 +214,25 @@ def main():
         print()
         print("GAME OVER")
         print()
-        print("Next time, try choosing between offence and defence.")
+        print("???: 'Next time, try choosing between offence and defence.'")
     elif FroggitDead == 1:
         print()
         print("YOU WIN?")
         print()
         if FroggitAngered == 1:
-            print("At least you were defending yourself...")
+            print("???: 'At least you were defending yourself...'")
         elif FroggitCalmed == 1:
-            print("I mean come on. You were in a relationship! You disgust me.")
+            print("???: 'I mean, come on. You were in a relationship! You disgust me.'")
         else:
-            print("Why would you kill an innocent creature! What did it ever do to you?!")
+            print("???: 'Why would you kill an innocent creature! What did it ever do to you?!'")
     elif FroggitSpared == 1:
         print()
         print("YOU WIN!")
         print()
-        print("Well done for being a good person!")
+        print("???: 'Well done for being a good person!'")
     print("Would you like to restart?")
-    Restart = input().lower()
-    if Restart == "yes":
+    RestartCommand = input().lower()
+    if RestartCommand == "yes":
         print()
         main()
 

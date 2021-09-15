@@ -2,9 +2,19 @@
 
 This is the repository for Undertale in Python. This is a passion project I've had from a young age which has turned now into me looking back at my stupid mistakes I made when I was 10 and making them not as bad. I will be updating this sometimes since I must prepare for Year 9 computing,
 
-## How to Download
+## How to Play
 
-Download by clicking the big green Code button then download zip and, while you may have some weird files, you have the games. (I would use the releases tab but I make so many small changes after a long coding session there would not be much point. Basically I'll upload a release when the game isn't bad lol.)
+Dependencies:
+
+You will need Python installed to open the game. (idk which version in particular but I code on the newest release which can be found [here](https://www.python.org/downloads/))
+
+How to download:
+
+You have two options when it comes to downloading. You can either get the cutting-edge build (whatever the newest code is) or a main release. (usually released after big updates or game breaking bugs are smashed)
+
+* Cutting-edge build: Click the large green button called download on the main project page and then download zip. Unzip this and run either of the .py files included.
+
+* Release: Click releases on the main project page and then choose which version you want to download. (the newest is recommended) When here, click on the .py file for which game you wan to download and then run.
 
 ### Promotion
 

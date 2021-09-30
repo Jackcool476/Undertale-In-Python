@@ -78,6 +78,7 @@ def main():
         MonsterCandy = 1
     else:
         print("You decide not to.")
+        MonsterCandy = 0
     print()
     print("???: 'Great. Now you're ready.'")
     print("'Ready for what?' You wonder, but before you can say anything -")

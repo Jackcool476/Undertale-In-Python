@@ -1,6 +1,6 @@
 # Undertale in Python
 
-This is the repository for Undertale in Python. This is a passion project I've had from a young age which has turned now into me looking back at my stupid mistakes I made when I was 10 and making them not as bad. I will be updating this sometimes since I must prepare for Year 9 computing,
+This is the repository for Undertale in Python. This is a passion project I've had from a young age which has now turned into me looking back at my stupid mistakes I made when I was 10 and making them not as bad. I will be updating this sometimes since I must prepare for Year 9 computing,
 
 ## How to Play
 
@@ -12,9 +12,9 @@ How to download:
 
 You have two options when it comes to downloading. You can either get the cutting-edge build (whatever the newest code is) or a main release. (usually released after big updates or game breaking bugs are smashed)
 
-* Cutting-edge build: Click the large green button called download on the main project page and then download zip. Unzip this and run either of the .py files included.
+- Cutting-edge build: Click the large green button called download on the main project page and then download zip. Unzip this and run either of the .py files included.
 
-* Release: Click releases on the main project page and then choose which version you want to download. (the newest is recommended) When here, click on the .py file for which game you wan to download and then run.
+- Release: Click releases on the main project page and then choose which version you want to download. (the newest is recommended) When here, click on the .py file for which game you wan to download and then run.
 
 ### Promotion
 

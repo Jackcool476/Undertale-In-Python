@@ -19,9 +19,9 @@ def main():
     print("???: 'You must take one of each to prepare.")
     print("You wonder what for, but decide not to question it.")
     input("You look down at the weapons and think about which to pick.")
-    input("Option A: Stick - Only being small, it won't do much, but it's better than nothing.")  #* Normal Mode
-    input("Option B: Burnt Pan - Hot to the touch. Lifting it, it feels heavy enough to knock someone out.")  #? Easy Mode
-    input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.")  #! Hard Mode
+    input("Option A: Stick - Only being small, it won't do much, but it's better than nothing.")
+    input("Option B: Burnt Pan - Hot to the touch. Lifting it, it feels heavy enough to knock someone out.")
+    input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.")
     print("Which weapon do you want? A, B or C?")
     WeaponChoice = input().lower()
     if WeaponChoice not in WeaponList:
@@ -46,9 +46,9 @@ def main():
     print()
     print("???: 'Good, now pick something to defend yourself with.'")
     input("You take a closer look at the armour in front of you.")
-    input("Option A: Faded Ribbon - A red ribbon that has long lost its lustre. You'd look cute enough to not attack with it on.")  #* Normal Mode
-    input("Option B: Manly Bandana - A small bandana that has some abs drawn on. With it on, you'll have protection from its sheer manliness.") #? Easy Mode
-    input("Option C: Bandage - An old, worn piece of cloth that won't protect you from anything.") #! Hard Mode
+    input("Option A: Faded Ribbon - A red ribbon that has long lost its lustre. You'd look cute enough to not attack with it on.")
+    input("Option B: Manly Bandana - A small bandana that has some abs drawn on. With it on, you'll have protection from its sheer manliness.")
+    input("Option C: Bandage - An old, worn piece of cloth that won't protect you from anything.")
     print("Which piece of armour do you want? A, B or C?")
     ArmourChoice = input().lower()
     if ArmourChoice not in ArmourList:

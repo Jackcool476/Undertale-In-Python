@@ -16,10 +16,10 @@ def main():
     print("Suddenly, the lights turn on!")
     print("You notice some items in front of you, a few weapons and some pieces of armour.")
     print("An ominous voice bellows at you from above.")
-    print("???: 'You must take one of each to prepare.")
-    print("You wonder what for, but decide not to question it.")
+    print("???: 'You must take one of each to prepare.'")
+    print("You wonder what for but decide not to question it.")
     input("You look down at the weapons and think about which to pick.")
-    input("Option A: Stick - Only being small, it won't do much, but it's better than nothing.")
+    input("Option A: Stick - Only being tiny, it won't do much, but it's better than nothing.")
     input("Option B: Burnt Pan - Hot to the touch. Lifting it, it feels heavy enough to knock someone out.")
     input("Option C: Toy Knife - Made of foam. It'll do next to nothing, but it might scare someone.")
     print("Which weapon do you want? A, B or C?")
@@ -47,9 +47,9 @@ def main():
     print("???: 'Good, now pick something to defend yourself with.'")
     input("You take a closer look at the armour in front of you.")
     input("Option A: Faded Ribbon - A red ribbon that has long lost its lustre. You'd look cute enough to not attack with it on.")
-    input("Option B: Manly Bandana - A small bandana that has some abs drawn on. With it on, you'll have protection from its sheer manliness.")
+    input("Option B: Manly Bandana - A small bandana that has some abs drawn on. With it on, you'll gain protection from its sheer manliness.")
     input("Option C: Bandage - An old, worn piece of cloth that won't protect you from anything.")
-    print("Which piece of armour do you want? A, B or C?")
+    print("Which armour do you want? A, B or C?")
     ArmourChoice = input().lower()
     if ArmourChoice not in ArmourList:
         ArmourChoice = random.choice(ArmourList)
@@ -74,27 +74,27 @@ def main():
     print("Do you want to pick it up?")
     ChooseItem = input().lower()
     if ChooseItem == "yes":
-        print("You pick up the candy and put it in your back pocket.")
+        print("You pick up the candy and put it in your pocket.")
         MonsterCandy = 1
     else:
         print("You decide not to.")
         MonsterCandy = 0
     print()
     print("???: 'Great. Now you're ready.'")
-    print("'Ready for what?' You wonder, but before you can say anything -")
-    print("A Froggit bounces towards you.")
+    print("'Ready for what?' You wonder, but before you can say anything-")
+    print("Froggit bounces towards you.")
     print("It prepares for a fight!")
 
     while "According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible.":
         if FroggitBurnTime >= 1:
-            print("The froggit was burnt and lost 2 HP.")
+            print("Froggit was burnt and lost 2 HP.")
             FroggitHealth -= 2
             FroggitBurnTime -= 1
             if FroggitHealth <= 0:
                 FroggitDead = 1
                 break
             if FroggitBurnTime < 1:
-                print("The froggit stopped burning.")
+                print("Froggit stopped burning.")
         print()
         print("HP =", PlayerHealth)
         print()
@@ -133,7 +133,7 @@ def main():
                     print("Your flirt calmed Froggit, but it wasn't enough to woo it.")
                     FroggitAngered = 0
                 elif FroggitCalmed == 1:
-                    print("Wait, do you want this to turn into a dating simulator? No!")
+                    print("???: 'Wait, do you want this to turn into a dating simulator? No!'")
                 else:
                     print("Froggit blushes!")
                     print("Froggit doesn't want to fight you anymore.")
@@ -147,25 +147,25 @@ def main():
                     print("Froggit will now deal more damage!")
                     FroggitAngered = 1
                 else:
-                    print("Froggit is too angry to listen to anymore of your insults.")
+                    print("Froggit is too angry to listen to any more of your insults.")
             else:
-                print("No time to do anything, Froggit is ready to fight!")
+                print("No time to do anything because Froggit is ready to fight!")
         elif BattleCommand == "item":
             if MonsterCandy > 0:
                 if MonsterCandy == 1:
                     print("You have one candy.")
                 else:
                     print("You have", MonsterCandy, "candies. nuts :)")
-                print("Do you want to eat a Monster Candy? (YES or NO)")
+                print("Do you want to eat a Monster Candy?")
                 ItemCommand = input().lower()
                 if ItemCommand == "yes":
                     PlayerHealth += 10
                     if PlayerHealth > 20:
                         PlayerHealth = 20
                     MonsterCandy -= 1
-                    print("You ate a candy and now have", PlayerHealth, "HP.")
+                    print("You ate the candy and now have", PlayerHealth, "HP.")
                 else:
-                    print("You decide not to use a candy.")
+                    print("You decide not to use the candy.")
             else:
                 print("You have no items to use.")
         elif BattleCommand == "mercy":
@@ -181,9 +181,9 @@ def main():
             elif MercyCommand == "flee":
                 print("You realise that, in fight simulators, there is nowhere to run to.")
             else:
-                print("No time to run, Froggit is ready to fight!")
+                print("No time to run because Froggit is ready to fight!")
         else:
-            print("While you were thinking, Froggit attacks!")
+            print("While you were thinking, Froggit attacked!")
         if FroggitCalmed == 0:
             FroggitAttackPos = int(random.randint(1, 2))
             FroggitDamage = int(random.randint(2, 5))

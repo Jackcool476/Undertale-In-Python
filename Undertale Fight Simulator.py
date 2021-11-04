@@ -1,4 +1,6 @@
 import random
+WeaponList = ["a", "b", "c"]
+ArmourList = ["a", "b", "c"]
 
 def main():
     PlayerHealth = 20
@@ -10,8 +12,7 @@ def main():
     FroggitAngered = 0
     FroggitBurnTime = 0
     BurnEnabled = 0
-    WeaponList = ["a", "b", "c"]
-    ArmourList = ["a", "b", "c"]
+    DumbLevel = 0
     print("You wake up in a dark and damp room.")
     print("Suddenly, the lights turn on!")
     print("You notice some items in front of you, a few weapons and some pieces of armour.")
@@ -29,7 +30,7 @@ def main():
         print("You can't decide which weapon to choose.")
         print("The voice speaks again.")
         print("???: 'You really can't choose? Fine. Take Option", WeaponChoice.upper())
-        DumbLevel = 1
+        DumbLevel += 1
     if WeaponChoice == "a":
         PlayerMinDamage = 2
         PlayerMaxDamage = 5

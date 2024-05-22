@@ -1,6 +1,6 @@
 # Undertale in Python
 
-This is the repository for Undertale in Python. This is a passion project I've had from a young age; I'm somewhat proud of it. Now, it's just turned into me looking back at the stupid mistakes I made when I was 10 and trying to fix them.
+This is the repository for Undertale in Python. This is a passion project I've had from a young age, but in no way represents my current abilities (thank god) even though it was helpful to learn the Python fundamentals. 
 
 ## How to Play
 
@@ -19,8 +19,7 @@ You have two options when it comes to downloading. You can either get the cuttin
 ## Promotion
 
 - [Youtube](https://www.youtube.com/channel/UCMF5plyvE3mCZA8ke_mqWcw) (cringe warning)
-- [Twitter](https://twitter.com/UrpGuy)
 
 ## Thank You
 
-Please try to enjoy this absolute mess of code; if you would be kind enough and know-how, help me fix some bugs and make this presentable.
+Please try to enjoy this absolute mess of code.
